@@ -1,0 +1,113 @@
+.bootimg {
+  height: 500px;
+  object-fit: fill;
+}
+
+.banner-img {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.home-page h1 {
+  color: gray;
+  font-family: "Playfair Display", serif;
+}
+
+/* Using Bootstrap's grid for layout; remove extra space when sidebar hidden */
+.home-page .filters.d-none {
+  display: none !important;
+}
+.home-page .card {
+  background-color: rgba(128, 128, 128, 0.097);
+  width: 100%;
+  margin: 0; /* let Bootstrap gutters handle spacing */
+}
+
+/* Ensure even inner spacing for cards */
+.home-page .card .card-body {
+  padding: 12px;
+}
+
+/* Maintain consistent action button layout */
+.home-page .card .card-name-price {
+  gap: 8px;
+}
+.home-page .card:hover {
+  transform: scale(0.9);
+}
+.home-page .card-name-price {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+
+.home-page .card-price {
+  color: green;
+  font-weight: bold;
+}
+.home-page button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-page .card-text {
+  color: rgb(90, 89, 89);
+}
+
+/* .home-page .card img:hover {
+    transform: scale(0.9);
+  } */
+
+.home-page .card-img-top {
+  height: 200px; /* keep consistent with component inline style */
+  object-fit: cover;
+}
+
+/* ==================
+  filters
+  ============== */
+.filters h4 {
+  margin-top: 0; /* Avoid large gap pushing content down */
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+@media (min-width: 992px) {
+  /* Optional breathing space on large screens only */
+  .filters h4 {
+    margin-top: 12px;
+  }
+}
+
+.ant-checkbox-wrapper {
+  margin: 2px;
+}
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 2px;
+}
+
+.filters button {
+  background-color: black;
+  width: 100%;
+  border: none;
+  border-radius: 6px; /* match rounded inputs */
+  margin-top: 12px;
+}
+
+.loadmore {
+  color: green;
+  font-weight: bold;
+  font-size: 20px !important;
+}
+
+/* Hide the banner image on smaller screens */
+@media (max-width: 768px) {
+  .banner-img {
+    display: none;
+  }
+}
